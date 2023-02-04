@@ -78,9 +78,9 @@ void findPath(int maze[5][5]) {
         if (dir == 3) {
                 if (checked[c][r - 1] == 0 && r - 1 >= 0 && maze[c][r - 1] >= 1) {
 
-                    choice right(c, r - 1);
+                    choice left(c, r - 1);
                     checked[c][r - 1] = true;
-                    path.push(right);
+                    path.push(left);
                    
                 }
             }
@@ -139,8 +139,8 @@ int main(){
     {1, 0, 1, 0, 1 },
     {1, 1, 1, 0, 1 },
     {1, 0, 1, 1, 1 },
-    {0, 0, 1, 0, 1 },
-    {1, 1, 1, 0, 2 },
+    {1, 0, 1, 0, 1 },
+    {1, 1, 0, 2, 1 },
     };
     
     for (int i = 0;i<5;i++){
